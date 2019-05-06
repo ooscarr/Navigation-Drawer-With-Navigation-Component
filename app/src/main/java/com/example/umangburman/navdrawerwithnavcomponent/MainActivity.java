@@ -15,7 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity implements
-                                    NavigationView.OnNavigationItemSelectedListener {
+    NavigationView.OnNavigationItemSelectedListener {
     public Toolbar toolbar;
 
     public DrawerLayout drawerLayout;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(drawerLayout, Navigation.findNavController(this, R.id.nav_host_fragment));
+        return NavigationUI.navigateUp(Navigation.findNavController(this,R.id.nav_host_fragment),drawerLayout);
     }
 
     @Override
